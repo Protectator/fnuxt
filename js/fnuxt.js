@@ -9,7 +9,7 @@
 }
 
 function fnuText(t) {
-	var words = t.split(/([\s+|'])/);
+	var words = t.split(/([\s+|'|,|\.|!|?])/);
 	for (var i = 0; i < words.length; i++) {
 		var w = words[i];
 		if (/^[a-zA-Z0-9]*$/.test(w)) {words[i] = fnuWord(w);}
