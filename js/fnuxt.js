@@ -10,12 +10,18 @@
 
 function fnuText(t) {
 	var words = t.split(/(\s+)/);
-	for (var i = 0; i < w.length; i++) {
+	for (var i = 0; i < words.length; i++) {
 		var w = words[i];
-		if (/^[a-zA-Z]*$/.test(w)) {w = fnuWord(w)}
+		if (/^[a-zA-Z]*$/.test(w)) {words[i] = fnuWord(w);}
 	}
+	return (words.join(""));
 }
 
 function isVow(ch) {
 	return /[aeiouyAEIOUYâêîôûÂÊÎÔÛàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝäëïöüÿÄËÏÖÜŸØøÆæåÅÅÃÕãõĀāĒēĂăĔĕĨĩĬĭŎŏŐőŒœŨũŬŭŮůŰűŶŷǾǿǼǽȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȔȕȖȗΑΕΗΙΟΥΩαεηιουωАЕИОУЭЮЯаеиоуэюяӔӕ]/.test(ch);
 }
+
+$("#fnuxtTitle").on("mouseover", function(e){$("#fnuxtTitle").html("Fnxtu");});
+$("#fnuxtTitle").on("mouseout", function(e){$("#fnuxtTitle").html("Fnuxt");});
+$("#baseText").on("change", function(e){$("#fnuText").html(fnuText($("#baseText").val()));})
+$("#baseText").on("keyup", function(e){$("#fnuText").html(fnuText($("#baseText").val()));})
