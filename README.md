@@ -6,4 +6,4 @@ fnuxt
 Demo
 ----
 
-Try it at http://protectator.ch/fnuxt/
+Try it at https://pages.protectator.ch/fnuxt
